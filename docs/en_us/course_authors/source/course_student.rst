@@ -12,7 +12,7 @@ For information about the data you can access, see the following topics:
 
 * :ref:`Accessing_anonymized`
 
-You can also view charts of certain student demographics for graded problems. See :ref:`course_grades.rst`. 
+You can also view charts of certain student demographics for graded problems. See :ref:`Grades`. 
 
 .. _PII:
 
@@ -24,7 +24,7 @@ The information that edX collects from site registrants includes personal inform
 
 Course authors should follow the policies established by their organizations and comply with the legal requirements of their locales to prevent public distribution or misuse of this information. 
 
-**Question**: I just made this statement up. What guidance can/should we give, for immediate publication and in the future?
+.. **Question**: I just made this statement up. What guidance can/should we give, for immediate publication and in the future? (sent to Tena and Jennifer Adams 31 Jan 14)
 
 .. _Accessing_student_data:
 
@@ -38,7 +38,7 @@ You can view data about the students who are currently enrolled in your course. 
 Student-reported data
 ======================
 
-When students register with edX, they select a public username and supply information about themselves. 
+When students register with edX, they select a public username and supply information about themselves. Most of this information is optional, so not all of the students who are enrolled in your course provide it.
 
  .. image:: Images/Registration_page.png
    :alt: Fields that collect student information during registration
@@ -70,7 +70,7 @@ To view or download student data:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** then **Try New Beta Dashboard**.
+#. Click **Instructor** then **Try New Beta Dashboard**.
 
 #. Click **Data Download**.
 
@@ -78,7 +78,7 @@ To view or download student data:
 
    A table of the student data displays, with one row for each enrolled student. Longer values, such as student goals, are truncated.
 
-  .. image:: Images/StudentData_Table.png
+ .. image:: Images/StudentData_Table.png
     :alt: Table with columns for the collected data points and rows for each student on the Instructor Dashboard
 
    **Note**:: In the future, edX may also request that students select a language and location. This data is not collected at this time.
@@ -87,19 +87,19 @@ To view or download student data:
 
    You are prompted to open or save the enrolled_profiles.csv file. All student-supplied data is included without truncation.
 
-**Note**:: In addition to the data for enrolled students, data for the course staff is included in the display or file.
+**Note**: In addition to the data for enrolled students, data for the course staff is included in the display or file.
 
 ==========================================
 Viewing demographic distributions
 ==========================================
 
-You can view a course-wide summary of certain demographic distributions for your currently enrolled students. The total count for each value reported for gender and educational attainment displays on the Instructor Dashboard. 
+You can view a course-wide summary of certain demographic distributions for your currently enrolled students. The total count for each value reported for gender and educational attainment displays on the Instructor Dashboard. Becasue this data is optional, the totals for each of these self-reported values are likely to be lower than your course enrollment total.
 
 To display demographic distributions for gender and educational attainment:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** then **Try New Beta Dashboard**.
+#. Click **Instructor** then **Try New Beta Dashboard**.
 
 #. Click **Analytics**. Tables display Gender Distribution and Level of Education for the students currently enrolled in your course.
 
@@ -123,13 +123,13 @@ To download a file of assigned user IDs and anonymized user IDs:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Data Download** > **Get Student Anonymized IDs CSV**.
 
 You are prompted to open or save the (course-id)-anon-id.csv file for your course. This file contains the user ID that is assigned to each student at registration and its corresponding anonymized ID. Values are included for every student who ever enrolled for your course. 
 
-You can use the data in this file together with the data in the enrolled_profile.csv file of student data and in a (course_id)_grade_report_(date).csv file for your course to research and deanonymize student data.
+You can use the data in this file together with the data in the enrolled_profile.csv file of student data and in a *course_id*_grade_report_*date*.csv file for your course to research and deanonymize student data.
 
 
 

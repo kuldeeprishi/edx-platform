@@ -1,8 +1,10 @@
+.. _Grades:
+
 ############################
 Grades
 ############################
 
-You can review information about how grading is configured for your course, and generate student grades, at any time after you create the course. You can also make adjustments to how a problem is graded, for a single student or all students
+You can review information about how grading is configured for your course, and generate student grades, at any time after you create the course. You can also make adjustments to how a problem is graded, for a single student or all students.
 
 For information about the grading data you can access and the changes you can make, see the following topics:
 
@@ -12,8 +14,9 @@ For information about the grading data you can access and the changes you can ma
 
 * :ref:`Adjusting_grades`
 
-For information about how you establish a grading policy and work with the problem components in your course, see the *Getting Started with Studio* guide.
+For information about how you establish a grading policy and work with the problem components in your course, see :ref:`Establish a Grading Policy` or :ref:`Working with Problem Components`.
 
+**Important**: If you make changes to your grading policy or problem components after a course starts, students can see the effect of your changes on their Progress pages. Be sure to announce any changes on your Course Info page.
 
 .. _Reviewing_grades:
 
@@ -27,7 +30,7 @@ You establish a grading policy for your course when you create it in Studio. Whi
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Data Download** > **Grading Configuration**.
 
@@ -40,8 +43,11 @@ You establish a grading policy for your course when you create it in Studio. Whi
 
    .. image:: Images/Grading_Configuration_Studio.png
      :alt: Studio example of homework assignment type and grading weight
+     :height:283
+     :width:613
 
-**Question:** Is this example suitable/valuable? is there a better example?
+For more information, see :ref:`configure`.
+
 
 .. _Accessing_grades:
 
@@ -61,15 +67,15 @@ To generate grades for the students who are currently enrolled in your course:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Data Download**.
 
 #. To start the grading process, click **Generate Grade Report**.
 
-   A status message indicates that the grading process is in progress. This process can take some time to complete, but you can navigate away from this page and do other work while it runs.
+A status message indicates that the grading process is in progress. This process can take some time to complete, but you can navigate away from this page and do other work while it runs.
 
-   When the file is ready for download, a link displays at the bottom of this page.
+When the file is ready for download, a link to the CSV file displays at the bottom of this page.
 
 ==========================================
 Downloading grades for enrolled students
@@ -81,15 +87,13 @@ To download a file of student grades:
 
 #. View the live version of your course.
 
-
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
-
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Data Download**.
 
+#. To open or save a grade report file, click the *course_id*_grade_report_*date*.csv file name at the bottom of the page.
 
-#. To open or save a grade report file, click the (*course_id*)_grade_report_(*date*).csv file name at the bottom of the page.
-
+**Note**: To prevent the accidental distribution of student data, you can only download these files by clicking the links on this page. You cannot copy a link and save it or email it, as the value for the link that you copy expires within five minutes.
 
 =========================================================
 Checking the progress of a single student
@@ -103,7 +107,7 @@ To view current grades for a student:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Student Admin**.
 
@@ -111,12 +115,13 @@ To view current grades for a student:
 
 #. Click **Student Progress Page**.
 
-   The Course Progress page for the student displays a chart with the grade for each homework, lab, midterm, final, and any other assignment types in your course, and the total grade earned for the course to date. 
+The Course Progress page for the student displays a chart with the grade for each homework, lab, midterm, final, and any other assignment types in your course, and the total grade earned for the course to date. 
 
-**Question:** I'd like to include an image but don't have good sample data. How can I access a good example?
+   .. image:: Images/Student_Progress.png
+     :alt: A bar chart from a student's Progress page showing grade acheived for each assignment
 
 =========================================================
-Checking a response submitted by a student
+Checking a student's submission and submission history
 =========================================================
 
 For a single student and problem, you can review the exact response submitted, the number of attempts made, and the date and time of the submission. You identify the student by supplying a username. 
@@ -131,9 +136,9 @@ To review a response submitted by a student:
 
 #. Enter the username for the student whose work you want to review and click **View History** at the end of the page.
 
-   Information about the response or responses provided by the student displays. 
+Information about the response or responses provided by the student displays. 
 
-   To close the Submission History Viewer, click on the browser page outside of the viewer.
+To close the Submission History Viewer, click on the browser page outside of the viewer.
 
 ===================================================
 Viewing student demographics for graded problems
@@ -147,17 +152,17 @@ To display demographic distributions for gender and educational attainment:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Analytics**. 
 
 #. In the Grade Distribution section, select a problem. 
 
-   **Question**: this is a tough UI to use: how do they correlate the codes in this drop-down with actual constructed problems? the copy-and-paste UI on the Student Admin page actually works a little better imo.
+..  **Question**: (sent to Olga 31 Jan 14) this is a tough UI to use: how do they correlate the codes in this drop-down with actual constructed problems? the copy-and-paste UI on the Student Admin page actually works a little better imo.
 
    Graphs display how grades for that problem are distributed, and plotted by year of birth.
 
-   **Question**: I'd like to include an image, but need a good example. Suggestions?
+.. **Question**: I'd like to include an image, but need a good example. Suggestions?
 
 .. _Adjusting_grades:
 
@@ -208,7 +213,7 @@ To find the unique identifier in the URL for a problem:
 Rescoring student submissions
 ===================================================
 
-Each problem that you define for your course includes a correct answer, and may also include a tolerance or acceptable alternatives. If you decide to make a change to these values, you can recore any responses that were already submitted. For a specified problem, you can rescore the work submitted by a single student, or rescore the submissions made by every enrolled student. 
+Each problem that you define for your course includes a correct answer, and may also include a tolerance or acceptable alternatives. If you decide to make a change to these values, you can recore any responses that were already submitted. For a specified problem, you can rescore the work submitted by a single student, or rescore the submissions made by every enrolled student or problem. 
 
 **Note**: In order to recore a problem, you need its unique identifier. See :ref:`finding_URL`.
 
@@ -216,7 +221,7 @@ To rescore a problem:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Student Admin**. 
 
@@ -230,13 +235,13 @@ To rescore a problem:
 
 #. To view the results of the rescore process, click either **Show Background Task History for Student** or **Show Background Task History for Problem**.
 
-   A table displays the status of the rescore process for each student.
+   A table displays the status of the rescore process for each student or problem.
 
 ===================================================
 Resetting student attempts
 ===================================================
 
-When you create a problem, you can define the number of attempts that a student can make to answer that problem correctly. If a student reports unexpected behavior for a problem, you can reset the value for that student's attempts to zero. If the unexpected behavior affects all of the students in your course, you can reset the number of attempts for all students to zero. 
+When you create a problem, you can limit the number of times that a student can try to answer that problem correctly. If unexpected issues occur for a problem, you can reset the value for one particular student's attempts back to zero so that the student can begin work over again. If the unexpected behavior affects all of the students in your course, you can reset the number of attempts for all students to zero. 
 
 For more information about modifying a released problem, including other workarounds, see the *Getting Started with Studio* guide.
 
@@ -246,7 +251,7 @@ To reset student attempts for a problem:
 
 #. View the live version of your course.
 
-#. Click **Instructor Dashboard** > **Try New Beta Dashboard**.
+#. Click **Instructor** > **Try New Beta Dashboard**.
 
 #. Click **Student Admin**. 
 
