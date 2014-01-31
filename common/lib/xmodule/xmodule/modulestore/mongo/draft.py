@@ -174,7 +174,7 @@ class DraftModuleStore(MongoModuleStore):
 
         xblock.location = draft_loc
         super(DraftModuleStore, self).update_item(xblock, user)
-        # don't allow locations to truly represent thenmselves as draft outside of this file
+        # don't allow locations to truly represent themselves as draft outside of this file
         xblock.location = as_published(xblock.location)
 
     def delete_item(self, location, delete_all_versions=False, **kwargs):
