@@ -93,15 +93,19 @@ To view or download student data:
 Viewing demographic distributions
 ==========================================
 
-You can view a course-wide summary of certain demographic distributions for your currently enrolled students. The total count for each value reported for gender and educational attainment displays on the Instructor Dashboard. Becasue this data is optional, the totals for each of these self-reported values are likely to be lower than your course enrollment total.
+You can view a course-wide summary of certain demographic distributions for your currently enrolled students. The total count for each value reported for gender and educational attainment displays on the Instructor Dashboard. Because this data is optional, the totals for each of these self-reported values are likely to be lower than your course enrollment total. You can also view a chart with the ages of all currently enrolled students.
 
-To display demographic distributions for gender and educational attainment:
+To display demographic data for your students:
 
 #. View the live version of your course.
 
 #. Click **Instructor** then **Try New Beta Dashboard**.
 
-#. Click **Analytics**. Tables display Gender Distribution and Level of Education for the students currently enrolled in your course.
+#. Click **Analytics**. 
+
+   * The Year of Birth section displays a chart of enrolled students plotted by year of birth.
+
+   * The Gender Distribution and Level of Education sections show tables with counts of responses made by enrolled students.
 
    .. image:: Images/Distribution_Education.png
     :alt: Table with columns for different possible values for gender and total count reported for each value
@@ -109,7 +113,8 @@ To display demographic distributions for gender and educational attainment:
    .. image:: Images/Distribution_Gender.png
     :alt: Table with columns for different possible values for level of education completed and total count reported for each value
 
-Data for individual students is not shown, and you cannot download these counts directly from this page. See :ref:`Viewing and downloading student data`.
+  Data for individual students is not shown, and you cannot download data directly from this page. See :ref:`Viewing and downloading student data`.
+
 
 .. _Accessing_anonymized:
 

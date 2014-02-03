@@ -91,7 +91,7 @@ To download a file of student grades:
 
 #. Click **Data Download**.
 
-#. To open or save a grade report file, click the *course_id*_grade_report_*date*.csv file name at the bottom of the page.
+#. To open or save a grade report file, click the *course_id*\_grade_report_\*date*.csv file name at the bottom of the page.
 
 **Note**: To prevent the accidental distribution of student data, you can only download these files by clicking the links on this page. You cannot copy a link and save it or email it, as the value for the link that you copy expires within five minutes.
 
@@ -141,12 +141,12 @@ Information about the response or responses provided by the student displays.
 To close the Submission History Viewer, click on the browser page outside of the viewer.
 
 ===================================================
-Viewing student demographics for graded problems
+Viewing a histogram of scores for a problem
 ===================================================
 
-For a specified problem, you can view a chart of the grade distribution for all students who attempted the problem and by year of birth.
+You can view a chart of the score distribution for a specified problem.
 
-**Note**: In order to view demographics for a problem, you need its unique identifier. See :ref:`finding_URL`.
+**Note**: In order to view the score distribution for a problem, you need its unique identifier. See :ref:`finding_URL`.
 
 To display demographic distributions for gender and educational attainment:
 
@@ -156,13 +156,12 @@ To display demographic distributions for gender and educational attainment:
 
 #. Click **Analytics**. 
 
-#. In the Grade Distribution section, select a problem. 
+#. In the Grade Distribution section, select a problem by using its URL. 
+
+   A graph displays a histogram of scores for that problem.
 
 ..  **Question**: (sent to Olga 31 Jan 14) this is a tough UI to use: how do they correlate the codes in this drop-down with actual constructed problems? the copy-and-paste UI on the Student Admin page actually works a little better imo.
-
-   Graphs display how grades for that problem are distributed, and plotted by year of birth.
-
-.. **Question**: I'd like to include an image, but need a good example. Suggestions?
+.. **Question**: I'd like to include an image, but need a good example. Elina suggested using the edX demo course (I don't have access), and a problem that has multiple possible answers
 
 .. _Adjusting_grades:
 
@@ -176,8 +175,7 @@ When an error is discovered or corrected, or if you modify a problem after stude
 
 * Rescore the submitted answers to reevaluate the work.
 
-* Reset the number of attempts made to answer the question correctly.
-
+* Reset the number of attempts made to answer the question correctly so that students can try again.
 
 To make these adjustments, you need to specify a problem by supplying the unique identifier from its URL.
 
@@ -265,5 +263,5 @@ To reset student attempts for a problem:
 
 #. To view the results of the reset process, click either **Show Background Task History for Student** or **Show Background Task History for Problem**.
 
-   A table displays the status of the reset process for each student.
+   A table displays the status of the reset process for each student or problem.
 
