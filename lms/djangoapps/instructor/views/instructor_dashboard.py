@@ -109,7 +109,7 @@ def _section_course_info(course_id, access):
         'course_num': course_num,
         'course_name': course_name,
         'course_display_name': course.display_name,
-        'enrollment_count': CourseEnrollment.get_number_enrollments_for_course_id(course_id),
+        'enrollment_count': CourseEnrollment.num_enrolled_in(course_id),
         'has_started': course.has_started(),
         'has_ended': course.has_ended(),
         'list_instructor_tasks_url': reverse('list_instructor_tasks', kwargs={'course_id': course_id}),

@@ -358,7 +358,7 @@ class CourseEnrollment(models.Model):
         return enrollment
 
     @classmethod
-    def get_number_enrollments_for_course_id(cls, course_id):
+    def num_enrolled_in(cls, course_id):
         """
         Returns the count of active enrollments in a course.
 
@@ -367,6 +367,17 @@ class CourseEnrollment(models.Model):
         enrollment_number = CourseEnrollment.objects.filter(course_id=course_id, is_active=1).count()
 
         return enrollment_number
+
+    @classmethod
+    def is_course_full(cls, course):
+        """
+        Returns a boolean value regarding whether a course has already reached it's max enrollment
+        capacity
+        """
+        is_course_full = False
+        if course.max_student_enrollments_allowed:
+            is_course_full = cls.num_enrolled_in(course.location.course_id) >= course.max_student_enrollments_allowed
+        return is_course_full
 
     def update_enrollment(self, mode=None, is_active=None):
         """

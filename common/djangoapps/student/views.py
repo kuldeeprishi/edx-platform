@@ -445,9 +445,7 @@ def change_enrollment(request):
             return HttpResponseBadRequest(_("Enrollment is closed"))
 
         # see if we have already filled up all allowed enrollments
-        is_course_full = False
-        if course.max_student_enrollments_allowed:
-            is_course_full = CourseEnrollment.get_number_enrollments_for_course_id(course_id) >= course.max_student_enrollments_allowed
+        is_course_full = CourseEnrollment.is_course_full(course)
 
         if is_course_full:
             return HttpResponseBadRequest(_("Course is full"))
