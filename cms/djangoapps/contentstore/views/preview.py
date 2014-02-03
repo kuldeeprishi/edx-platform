@@ -111,8 +111,6 @@ def _preview_module_system(request, descriptor):
     else:
         course_id = get_course_for_item(descriptor.location).location.course_id
 
-    replace_urls=partial(static_replace.replace_static_urls, data_directory=None, course_id=course_id)
-
     return PreviewModuleSystem(
         static_url=settings.STATIC_URL,
         # TODO (cpennington): Do we want to track how instructors are using the preview problems?
@@ -121,7 +119,7 @@ def _preview_module_system(request, descriptor):
         get_module=partial(_load_preview_module, request),
         render_template=render_from_lms,
         debug=True,
-        replace_urls=replace_urls,
+        replace_urls=partial(static_replace.replace_static_urls, data_directory=None, course_id=course_id),
         user=request.user,
         can_execute_unsafe_code=(lambda: can_execute_unsafe_code(course_id)),
         mixins=settings.XBLOCK_MIXINS,
@@ -135,7 +133,7 @@ def _preview_module_system(request, descriptor):
 
             # This wrapper replaces urls in the output that start with /static
             # with the correct course-specific url for the static content
-            replace_urls,
+            partial(replace_static_urls, None, course_id=course_id),
         ),
         error_descriptor_class=ErrorDescriptor,
         # get_user_role accepts a location or a CourseLocator.
