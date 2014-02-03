@@ -11,7 +11,7 @@ def i_register_for_the_course(_step, course):
     world.browser.visit(url)
     world.css_click('section.intro a.register')
 
-    assert world.is_css_present('div.container.dashboard')
+    assert world.is_css_present('section.container.dashboard')
 
 
 @step(u'I should see an empty dashboard message')
