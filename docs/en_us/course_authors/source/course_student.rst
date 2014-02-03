@@ -134,7 +134,7 @@ To download a file of assigned user IDs and anonymized user IDs:
 
 You are prompted to open or save the (course-id)-anon-id.csv file for your course. This file contains the user ID that is assigned to each student at registration and its corresponding anonymized ID. Values are included for every student who ever enrolled for your course. 
 
-You can use the data in this file together with the data in the enrolled_profile.csv file of student data and in a *course_id*_grade_report_*date*.csv file for your course to research and deanonymize student data.
+You can use the data in this file together with the data in the enrolled_profile.csv file of student data and in a *course_id* \_grade_report_\ *date*.csv file for your course to research and deanonymize student data.
 
 
 

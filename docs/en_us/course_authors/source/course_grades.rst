@@ -91,7 +91,7 @@ To download a file of student grades:
 
 #. Click **Data Download**.
 
-#. To open or save a grade report file, click the *course_id*\_grade_report_\*date*.csv file name at the bottom of the page.
+#. To open or save a grade report file, click the *course_id* \_grade_report_\ *date*.csv file name at the bottom of the page.
 
 **Note**: To prevent the accidental distribution of student data, you can only download these files by clicking the links on this page. You cannot copy a link and save it or email it, as the value for the link that you copy expires within five minutes.
 
