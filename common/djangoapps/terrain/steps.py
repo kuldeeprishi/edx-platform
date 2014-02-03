@@ -51,12 +51,12 @@ def i_visit_the_homepage(step):
 @step(u'I (?:visit|access|open) the dashboard$')
 def i_visit_the_dashboard(step):
     world.visit('/dashboard')
-    assert world.is_css_present('section.container.dashboard')
+    assert world.is_css_present('div.container.dashboard')
 
 
 @step('I should be on the dashboard page$')
 def i_should_be_on_the_dashboard(step):
-    assert world.is_css_present('section.container.dashboard')
+    assert world.is_css_present('div.container.dashboard')
     assert 'Dashboard' in world.browser.title
 
 
@@ -159,7 +159,7 @@ def i_am_logged_in(step):
     world.create_user('robot', 'test')
     world.log_in(username='robot', password='test')
     world.browser.visit(lettuce.django.django_url('/'))
-    dash_css = 'section.container.dashboard'
+    dash_css = 'div.container.dashboard'
     assert world.is_css_present(dash_css)
 
 
