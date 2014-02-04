@@ -326,7 +326,11 @@ class LTIModule(LTIFields, XModule):
         the link being launched.
         lti_id should be context_id by meaning.
         """
-        return u':'.join(i for i in (urllib.quote(self.lti_id), self.get_resource_link_id(), self.get_user_id()))
+        return "{id}:{resource_link}:{user_id}".format(
+            id=urllib.quote(self.lti_id),
+            resource_link=self.get_resource_link_id(),
+            user_id=self.get_user_id()
+        )
 
 
     def oauth_params(self, custom_parameters, client_key, client_secret):
