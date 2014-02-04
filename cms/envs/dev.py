@@ -186,6 +186,10 @@ SEGMENT_IO_KEY = os.environ.get('SEGMENT_IO_KEY')
 if SEGMENT_IO_KEY:
     FEATURES['SEGMENT_IO'] = True
 
+######################### SHORT DESCRIPTIONS ##############################
+
+FEATURES['EDITABLE_SHORT_DESCRIPTION'] = True
+
 
 #####################################################################
 # Lastly, see if the developer has any local overrides.

@@ -461,6 +461,12 @@ def settings_handler(request, tag=None, package_id=None, branch=None, version_gu
             settings.FEATURES.get('ENABLE_MKTG_SITE', False)
         )
 
+        short_description_editable = MicrositeConfiguration.get_microsite_configuration_value_for_org(
+            course_module.location.org,
+            'EDITABLE_SHORT_DESCRIPTION',
+            settings.FEATURES.get('EDITABLE_SHORT_DESCRIPTION', False)
+        )
+
         return render_to_response('settings.html', {
             'context_course': course_module,
             'course_locator': locator,
@@ -468,6 +474,7 @@ def settings_handler(request, tag=None, package_id=None, branch=None, version_gu
             'course_image_url': utils.course_image_url(course_module),
             'details_url': locator.url_reverse('/settings/details/'),
             'about_page_editable': about_page_editable,
+            'short_description_editable': short_description_editable,
             'upload_asset_url': upload_asset_url
         })
     elif 'application/json' in request.META.get('HTTP_ACCEPT', ''):

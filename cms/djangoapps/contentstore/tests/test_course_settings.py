@@ -76,6 +76,11 @@ class CourseDetailsTestCase(CourseTestCase):
             CourseDetails.update_from_json(self.course_locator, jsondetails.__dict__).syllabus,
             jsondetails.syllabus, "After set syllabus"
         )
+        jsondetails.short_description = "Short Description"
+        self.assertEqual(
+            CourseDetails.update_from_json(self.course_locator, jsondetails.__dict__).short_description,
+            jsondetails.short_description, "After set short_description"
+        )
         jsondetails.overview = "Overview"
         self.assertEqual(
             CourseDetails.update_from_json(self.course_locator, jsondetails.__dict__).overview,
@@ -120,6 +125,7 @@ class CourseDetailsTestCase(CourseTestCase):
 
             self.assertContains(response, "Introducing Your Course")
             self.assertContains(response, "Course Image")
+            self.assertNotContains(response, "Course Short Description")
             self.assertNotContains(response,"Course Overview")
             self.assertNotContains(response,"Course Introduction Video")
             self.assertNotContains(response, "Requirements")
@@ -127,7 +133,7 @@ class CourseDetailsTestCase(CourseTestCase):
     def test_regular_site_fetch(self):
         settings_details_url = self.course_locator.url_reverse('settings/details/')
 
-        with mock.patch.dict('django.conf.settings.FEATURES', {'ENABLE_MKTG_SITE': False}):
+        with mock.patch.dict('django.conf.settings.FEATURES', {'ENABLE_MKTG_SITE': False, 'EDITABLE_SHORT_DESCRIPTION': True}):
             response = self.client.get_html(settings_details_url)
             self.assertContains(response, "Course Summary Page")
             self.assertContains(response, "Send a note to students via email")
@@ -141,6 +147,7 @@ class CourseDetailsTestCase(CourseTestCase):
 
             self.assertContains(response, "Introducing Your Course")
             self.assertContains(response, "Course Image")
+            self.assertContains(response, "Course Short Description")
             self.assertContains(response,"Course Overview")
             self.assertContains(response,"Course Introduction Video")
             self.assertContains(response, "Requirements")
@@ -186,6 +193,7 @@ class CourseDetailsViewTest(CourseTestCase):
         self.alter_field(url, details, 'enrollment_start', datetime.datetime(2012, 10, 12, 1, 30, tzinfo=utc))
 
         self.alter_field(url, details, 'enrollment_end', datetime.datetime(2012, 11, 15, 1, 30, tzinfo=utc))
+        self.alter_field(url, details, 'short_description', "Short Description")
         self.alter_field(url, details, 'overview', "Overview")
         self.alter_field(url, details, 'intro_video', "intro_video")
         self.alter_field(url, details, 'effort', "effort")
@@ -199,6 +207,7 @@ class CourseDetailsViewTest(CourseTestCase):
         self.compare_date_fields(details, encoded, context, 'end_date')
         self.compare_date_fields(details, encoded, context, 'enrollment_start')
         self.compare_date_fields(details, encoded, context, 'enrollment_end')
+        self.assertEqual(details['short_description'], encoded['short_description'], context + " short_description not ==")
         self.assertEqual(details['overview'], encoded['overview'], context + " overviews not ==")
         self.assertEqual(details['intro_video'], encoded.get('intro_video', None), context + " intro_video not ==")
         self.assertEqual(details['effort'], encoded['effort'], context + " efforts not ==")
