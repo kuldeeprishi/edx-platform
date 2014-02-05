@@ -157,7 +157,7 @@ FEATURES = {
     'ENABLE_SERVICE_STATUS': False,
 
     # Toggle to indicate use of a custom theme
-    'USE_CUSTOM_THEME': False,
+    'USE_CUSTOM_THEME': True,
 
     # Don't autoplay videos for students
     'AUTOPLAY_VIDEOS': False,

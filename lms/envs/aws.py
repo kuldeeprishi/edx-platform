@@ -371,3 +371,8 @@ PASSWORD_DICTIONARY = ENV_TOKENS.get("PASSWORD_DICTIONARY", [])
 
 ### INACTIVITY SETTINGS ####
 SESSION_INACTIVITY_TIMEOUT_IN_SECONDS = AUTH_TOKENS.get("SESSION_INACTIVITY_TIMEOUT_IN_SECONDS")
+
+try:
+    from .private import *      # pylint: disable=F0401
+except ImportError:
+    pass

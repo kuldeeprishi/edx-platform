@@ -8,3 +8,9 @@
 // }
 
 // --------------------
+.home {
+	>header {
+		background: $dashboard-profile-color;
+		@include background-image(url($homepage-bg-image));
+		}
+	}
