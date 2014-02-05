@@ -481,7 +481,11 @@ SERVER_EMAIL = 'devops@example.com'
 TECH_SUPPORT_EMAIL = 'technical@example.com'
 CONTACT_EMAIL = 'info@example.com'
 BUGS_EMAIL = 'bugs@example.com'
-ADMINS = ()
+ADMINS = (
+    ('Mohd. Irshad', 'mohd.irshad@iuc.org.in'),
+    ('Kuldeep K. Rishi', 'kuldeep.rishi@iuc.org.in'),
+    ('Irfan Ansari', 'irfan.ansari@iuc.org.in'),
+)
 MANAGERS = ADMINS
 
 # Static content
