@@ -21,7 +21,7 @@
     .outer-wrapper {
       @extend .animation-home-header-pop-up;
       margin: 0 auto;
-      padding: 240px 10px 0px;
+      padding: 180px 10px 0px;
       position: relative;
       max-width: 1200px;
       min-width: 760px;
@@ -280,13 +280,15 @@
         }
 
         .name {
-          bottom: -60px;
+          bottom: -62px;
           left: 0px;
           position: absolute;
           text-align: center;
           @include transition(all 0.25s ease-in-out 0s);
           width: 100%;
           z-index: 2;
+          line-height:62px;
+          background:#efefef;
 
           > span {
             color: $base-font-color;
@@ -355,7 +357,7 @@
 
             &:hover, &:focus {
               .name {
-                bottom: 14px;
+                bottom: -8px;
               }
             }
           }

@@ -475,3 +475,11 @@ if settings.DEBUG:
 #Custom error pages
 handler404 = 'static_template_view.views.render_404'
 handler500 = 'static_template_view.views.render_500'
+
+
+# Custom Url for API
+try:
+    from . import local_urls
+    urlpatterns +=local_urls.urlpatterns
+except:
+    pass

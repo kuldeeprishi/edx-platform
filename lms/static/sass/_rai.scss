@@ -10,10 +10,10 @@
 //-----------------
 
 //Cardinal Color Variables
-$cardinal-red: #F3971A;
-$dark-red: #8D1515; //Link Color
-$cardinal-light: #8D1500; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
-$cardinal-bg: #FCB353; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
+$cardinal-red: #6D6E71;
+$dark-red: #303030; //Link Color
+$cardinal-light: #3A3A3A; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
+$cardinal-bg: #ABABAB; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Beige Color Variables
 $beige: #9d9573;
@@ -21,9 +21,9 @@ $beige-60: lighten($beige, 18.5%); //Main Border/HR Color
 $beige-25: lighten($beige, 25%); 
 
 //Sandstone Color Variables
-$sandstone: #ddcf99;
-$sandstone-50: lighten($sandstone, 9%);
-$sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color 
+$sandstone: #F2F2F2;
+$sandstone-50: $sandstone;
+$sandstone-25: rgba(242, 242, 242, 0.85); //Important Heading BG Color 
 
 //Gray Color Variables
 $gray: #3f3c30; //Main Text Color
@@ -196,7 +196,6 @@ $video-thumb-url: '../themes/rai/images/rai-video-thumb.png';
     clip: auto !important;
     height: 50px;
     width: 550px;
-    margin-top: 50px;
 }
 
 @mixin footer_references_style {

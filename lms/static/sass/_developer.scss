@@ -12,5 +12,11 @@
 	>header {
 		background: $dashboard-profile-color;
 		@include background-image(url($homepage-bg-image));
+
+		height: 340px;
+		}
+
+	.outer-wrapper {
+		padding: 170px 10px 0;
 		}
 	}
