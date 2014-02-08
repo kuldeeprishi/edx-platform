@@ -225,16 +225,18 @@ ROOT_URLCONF = 'cms.urls'
 IGNORABLE_404_ENDS = ('favicon.ico')
 
 # Email
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'localhost'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'mail.iuc.org.in'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-DEFAULT_FROM_EMAIL = 'registration@example.com'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@example.com'
-SERVER_EMAIL = 'devops@example.com'
-ADMINS = ()
+EMAIL_HOST_USER = 'kuldeep.rishi@iuc.org.in'
+EMAIL_HOST_PASSWORD = 'M00cs@95892'
+DEFAULT_FROM_EMAIL = 'kuldeep.rishi@iuc.org.in'
+DEFAULT_FEEDBACK_EMAIL = 'kuldeep.rishi@iuc.org.in'
+SERVER_EMAIL = 'kuldeep.rishi@iuc.org.in'
+ADMINS = (
+    ('Kuldeep K. Rishi', 'kuldeep.rishi@iuc.org.in'),
+    )
 MANAGERS = ADMINS
 
 # Static content
