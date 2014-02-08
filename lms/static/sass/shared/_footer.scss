@@ -40,6 +40,8 @@
       .nav-colophon {
         @include clearfix();
         margin: $footer_margin;
+        border-bottom: 1px solid #484848;
+        padding-bottom: 15px;
 
         li {
           float: left;

@@ -142,7 +142,7 @@
   display: inline-block;
   font-size: 14px;
   font-weight: bold;
-  @include linear-gradient(top, $base-color 0%, $second-stop 50%, $third-stop 50%, $fourth-stop 100%);
+  @include linear-gradient(top, $base-color, #939090, #5B5B59, #444343);
   padding: 8px 20px;
   text-align: center;
   text-decoration: none;
@@ -162,10 +162,7 @@
     }
 
     cursor: pointer;
-    @include linear-gradient(top, $first-stop-hover  0%,
-                                  $second-stop-hover 50%,
-                                  $third-stop-hover  50%,
-                                  $fourth-stop-hover 100%);
+    @include linear-gradient(top, $base-color, #939090, #5B5B59, #444343);
   }
 
   &:active:not(:disabled) {

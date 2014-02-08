@@ -475,13 +475,14 @@ IGNORABLE_404_ENDS = ('favicon.ico')
 
 # Platform Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'registration@example.com'
-DEFAULT_FEEDBACK_EMAIL = 'feedback@example.com'
-SERVER_EMAIL = 'devops@example.com'
-TECH_SUPPORT_EMAIL = 'technical@example.com'
-CONTACT_EMAIL = 'info@example.com'
-BUGS_EMAIL = 'bugs@example.com'
+DEFAULT_FROM_EMAIL = 'donotreply@iuc.org.in'
+DEFAULT_FEEDBACK_EMAIL = 'donotreply@iuc.org.in'
+SERVER_EMAIL = 'donotreply@iuc.org.in'
+TECH_SUPPORT_EMAIL = 'donotreply@iuc.org.in'
+CONTACT_EMAIL = 'donotreply@iuc.org.in'
+BUGS_EMAIL = 'donotreply@iuc.org.in'
 ADMINS = (
+    ('Admin', 'donotreply@iuc.org.in'),
     ('Mohd. Irshad', 'mohd.irshad@iuc.org.in'),
     ('Kuldeep K. Rishi', 'kuldeep.rishi@iuc.org.in'),
     ('Irfan Ansari', 'irfan.ansari@iuc.org.in'),

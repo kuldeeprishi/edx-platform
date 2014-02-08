@@ -34,8 +34,7 @@
       border: 1px solid $border-color-3;
       box-shadow: 0 4px 25px 0 rgba(0,0,0, 0.5);
       @include box-sizing(border-box);
-      min-height: 120px;
-      margin-left: grid-width(2) + $gw-gutter;
+      margin-left: 40px;
       width: flex-grid(6);
       float: left;
       position: relative;
