@@ -372,3 +372,17 @@ PASSWORD_DICTIONARY = ENV_TOKENS.get("PASSWORD_DICTIONARY", [])
 ### INACTIVITY SETTINGS ####
 SESSION_INACTIVITY_TIMEOUT_IN_SECONDS = AUTH_TOKENS.get("SESSION_INACTIVITY_TIMEOUT_IN_SECONDS")
 
+
+#from .private import *
+
+# Debugging
+# print "\n*****Begin Testing *****\n"
+# print '===== Auth Settings ====='
+# print "EMAIL_HOST == ", EMAIL_HOST
+# print "EMAIL_HOST_USER == ", EMAIL_HOST_USER
+# print "EMAIL_HOST_PASSWORD == ", EMAIL_HOST_PASSWORD
+# print "EMAIL_PORT == ",EMAIL_PORT
+# print "EMAIL_USE_TLS == ", EMAIL_USE_TLS
+# print '===== Email Sender Settings ====='
+# print "DEFAULT_FROM_EMAIL == ", DEFAULT_FROM_EMAIL
+# print "\n*****End Testing *****\n"
