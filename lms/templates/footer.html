@@ -1,91 +1,55 @@
 ## mako
-<%! from django.core.urlresolvers import reverse %>
-<%! from django.utils.translation import ugettext as _ %>
-<%namespace name='static' file='static_content.html'/>
 
-<div class="wrapper wrapper-footer">
+<%! 
+  from django.core.urlresolvers import reverse 
+  from edxmako.shortcuts import marketing_link
+%>
+<%namespace name='static' file='static_content.html'/>
+<div class="wrapper-footer">
   <footer>
     <div class="colophon">
       <nav class="nav-colophon">
-      <ol>
-          <li class="nav-colophon-01">
-          <a id="about" href="${marketing_link('ABOUT')}">
-              ${_("About")}
-          </a>
-          </li>
-          <li class="nav-colophon-02">
-          <a id="jobs" href="${marketing_link('JOBS')}">
-              ${_("Jobs")}
-          </a>
-          </li>
-          <li class="nav-colophon-03">
-          <a id="press" href="${marketing_link('PRESS')}">
-              ${_("Press")}
-          </a>
-          </li>
-          <li class="nav-colophon-04">
-          <a id="faq" href="${marketing_link('FAQ')}">
-              ${_("FAQ")}
-          </a>
-          </li>
-          <li class="nav-colophon-05">
-          <a id="contact" href="${marketing_link('CONTACT')}">
-              ${_("Contact")}
-          </a>
-          </li>
-      </ol>
+        <ol>
+          <li><a href="http://uol.raiuniversity.edu/" style="padding-left: 0;">Home</a></li>
+          <li><a href="http://uol.raiuniversity.edu/elements/">Terms of Use</a></li>
+          <li><a href="http://uol.raiuniversity.edu/privacy-policy/" style="border-right: 0px solid #ffffff">Privacy Policy</a></li>
+        </ol>
       </nav>
-
-      <div class="colophon-about">
-        <img src="${static.url('images/header-logo.png')}" />
-
-        <p>${_("{platform_name} is a non-profit created by founding partners {Harvard} and {MIT} whose mission is to bring the best of higher education to students of all ages anywhere in the world, wherever there is Internet access. {platform_name}'s free online MOOCs are interactive and subjects include computer science, public health, and artificial intelligence.").format(platform_name="EdX", Harvard="Harvard", MIT="MIT")}</p>
+      <div id="address-info">
+        <p style="color: rgb(119, 119, 119);"><i class="fa fa-home"></i> Rai University</p>
       </div>
     </div>
 
-    <div class="references">
-      <nav class="nav-social">
-        <ul>
-          <li class="nav-social-01">
-            <a href="http://www.meetup.com/edX-Global-Community/" rel="external">
-              <img src="${static.url('images/social/ico-social-meetup.png')}" alt="edX on Meetup" />
-            </a>
-          </li>
-          <li class="nav-social-02">
-            <a href="http://www.facebook.com/EdxOnline" rel="external">
-              <img src="${static.url('images/social/ico-social-facebook.png')}" alt="edX on Facebook" />
-            </a>
-          </li>
-          <li class="nav-social-03">
-            <a href="https://twitter.com/edXOnline" rel="external">
-              <img src="${static.url('images/social/ico-social-twitter.png')}" alt="edX on Twitter" />
-            </a>
-          </li>
-          <li class="nav-social-04">
-            <a href="https://plus.google.com/108235383044095082735/posts" rel="external">
-              <img src="${static.url('images/social/ico-social-google.png')}" alt="edX on Google+" />
-            </a>
-          </li>
-          <li class="nav-social-05">
-            <a href="http://youtube.com/user/edxonline" rel="external">
-              <img src="${static.url('images/social/ico-social-youtube.png')}" alt="edX on YouTube" />
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div class="span3" id="footer-right-side">
+      <div id="stay-connected">
+          <p>STAY CONNECTED</p>
+      </div>
+      <div class="clearfix" id="footer-social-icons"> 
+                                                                                                                
+        <a title="Facebook Page" class="Facebook-icon" href="https://www.facebook.com/raiuniversityonline" target="_blank" ><img alt="" src="${static.url('images/social/facebook.png')}"></a>
+        <a title="Twitter Page" class="Twitter-icon" href="https://twitter.com/RUG_UOL"target="_blank" ><img alt="" src="${static.url('images/social/twitter.png')}"></a>       
+        <a title="G-Plus Page" class="G-Plus-icon" href="${static.url('images/social/gplus.png')}"></a>        
+        <a title="Linked in Page" class="Linked in-icon" href="http://www.linkedin.com/in/raiuniversityahmedabad"target="_blank" ><img alt="" src="${static.url('images/social/linkedin.png')}"></a>        
+        <a title="Blogger Page" class="Blogger-icon" href="http://rugonlinelearning.blogspot.in/"  target="_blank" ><img alt="" src="${static.url('images/social/blogger.png')}"></a>        
+        <a title="Pinterest Page" class="Pinterest-icon" href="http://www.pinterest.com/RUGUOL/"target="_blank" ><img alt="" src="${static.url('images/social/pinterest.png')}"></a>               
+        <a title="Tumbler Page" class="Tumbler-icon" href="http://www.tumblr.com/blog/rugonline" target="_blank" ><img alt="" src="${static.url('images/social/tumbler.png')}"></a>        
+        <a title="Stumble Up on Page" class="Stumble Up on-icon" href="http://www.stumbleupon.com/stumbler/RUG-Online" target="_blank"><img alt="" src="${static.url('images/social/sumbleupon.png')}"></a>      
+      </div>
+  </div>
 
-      <p class="copyright">${_("&copy; 2014 {platform_name}, some rights reserved.").format(platform_name=settings.PLATFORM_NAME)}</p>
 
-      <nav class="nav-legal">
-        <ul>
-          <li class="nav-legal-01">
-            <a href="${marketing_link('TOS')}">${_("Terms of Service and Honor Code")}</a>
-          </li>
-          <li class="nav-legal-02">
-            <a href="${marketing_link('PRIVACY')}">${_("Privacy Policy")}</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
   </footer>
+</div>
+
+<div id="su-footer">
+  <div class="su-container">
+    <div class="su-row">
+      <div id="su-footer-text" class="span10">
+        <div class="clear"></div>
+        <p class="copyright vcard">Copyright &copy; 2014,<span class="fn org">Rai University</span>. All rights reserved.
+         </p>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </div>
 </div>

@@ -64,5 +64,4 @@ CC_PROCESSOR['CyberSource']['PURCHASE_ENDPOINT'] = '/shoppingcart/payment_fake/'
 try:
     from .private import *      # pylint: disable=F0401
 except ImportError:
-    print 'private.py not found. Failing silently'
     pass

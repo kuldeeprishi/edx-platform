@@ -113,6 +113,7 @@ if os.environ.get('QUEUE') == 'high_mem':
 with open(CONFIG_ROOT / CONFIG_PREFIX + "env.json") as env_file:
     ENV_TOKENS = json.load(env_file)
 
+
 # STATIC_ROOT specifies the directory where static files are
 # collected
 STATIC_ROOT_BASE = ENV_TOKENS.get('STATIC_ROOT_BASE', None)
@@ -193,13 +194,13 @@ BULK_EMAIL_RETRY_DELAY_BETWEEN_SENDS = ENV_TOKENS.get('BULK_EMAIL_RETRY_DELAY_BE
 BULK_EMAIL_ROUTING_KEY = HIGH_PRIORITY_QUEUE
 
 # Theme overrides
-THEME_NAME = ENV_TOKENS.get('THEME_NAME', None)
+THEME_NAME = 'rai' #ENV_TOKENS.get('THEME_NAME', None)
 
 # Marketing link overrides
 MKTG_URL_LINK_MAP.update(ENV_TOKENS.get('MKTG_URL_LINK_MAP', {}))
 
 # Timezone overrides
-TIME_ZONE = ENV_TOKENS.get('TIME_ZONE', TIME_ZONE)
+TIME_ZONE = 'Asia/Calcutta' #ENV_TOKENS.get('TIME_ZONE', TIME_ZONE)
 
 # Translation overrides
 LANGUAGES = ENV_TOKENS.get('LANGUAGES', LANGUAGES)
@@ -303,7 +304,7 @@ OPEN_ENDED_GRADING_INTERFACE = AUTH_TOKENS.get('OPEN_ENDED_GRADING_INTERFACE',
                                                OPEN_ENDED_GRADING_INTERFACE)
 
 EMAIL_HOST_USER = AUTH_TOKENS.get('EMAIL_HOST_USER', '')  # django default is ''
-EMAIL_HOST_PASSWORD = AUTH_TOKENS.get('EMAIL_HOST_PASSWORD', '')  # django default is ''
+EMAIL_HOST_PASSWORD = str(AUTH_TOKENS.get('EMAIL_HOST_PASSWORD', ''))  # django default is ''
 
 # Datadog for events!
 DATADOG = AUTH_TOKENS.get("DATADOG", {})
@@ -372,11 +373,9 @@ PASSWORD_DICTIONARY = ENV_TOKENS.get("PASSWORD_DICTIONARY", [])
 ### INACTIVITY SETTINGS ####
 SESSION_INACTIVITY_TIMEOUT_IN_SECONDS = AUTH_TOKENS.get("SESSION_INACTIVITY_TIMEOUT_IN_SECONDS")
 
-
-#from .private import *
-
 # Debugging
 # print "\n*****Begin Testing *****\n"
+# print "THEME_NAME == ", THEME_NAME
 # print '===== Auth Settings ====='
 # print "EMAIL_HOST == ", EMAIL_HOST
 # print "EMAIL_HOST_USER == ", EMAIL_HOST_USER
