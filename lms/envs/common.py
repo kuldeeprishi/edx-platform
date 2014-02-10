@@ -229,9 +229,9 @@ XQUEUE_WAITTIME_BETWEEN_REQUESTS = 5  # seconds
 
 ############################# SET PATH INFORMATION #############################
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()  # /edx-platform/lms
-REPO_ROOT = PROJECT_ROOT.dirname()
-COMMON_ROOT = REPO_ROOT / "common"
-ENV_ROOT = REPO_ROOT.dirname()  # virtualenv dir /edx-platform is in
+REPO_ROOT = PROJECT_ROOT.dirname()  # /edx-platform
+COMMON_ROOT = REPO_ROOT / "common"  # /edx-platform/common
+ENV_ROOT = REPO_ROOT.dirname()  # virtualenv dir /edx-platform is in # edxapp/
 COURSES_ROOT = ENV_ROOT / "data"
 
 DATA_DIR = COURSES_ROOT
@@ -482,11 +482,8 @@ TECH_SUPPORT_EMAIL = 'donotreply@iuc.org.in'
 CONTACT_EMAIL = 'donotreply@iuc.org.in'
 BUGS_EMAIL = 'donotreply@iuc.org.in'
 ADMINS = (
-    ('Admin', 'donotreply@iuc.org.in'),
-    ('Mohd. Irshad', 'mohd.irshad@iuc.org.in'),
-    ('Kuldeep K. Rishi', 'kuldeep.rishi@iuc.org.in'),
-    ('Irfan Ansari', 'irfan.ansari@iuc.org.in'),
-)
+    'Admin', 'donotreply@iuc.org.in',
+    )
 MANAGERS = ADMINS
 
 # Static content

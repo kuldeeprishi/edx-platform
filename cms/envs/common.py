@@ -226,17 +226,16 @@ IGNORABLE_404_ENDS = ('favicon.ico')
 
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mail.iuc.org.in'
+EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = False
-EMAIL_HOST_USER = 'donotreply@iuc.org.in'
-EMAIL_HOST_PASSWORD = 'Ind1a#4321'
-DEFAULT_FROM_EMAIL = 'donotreply@iuc.org.in'
-DEFAULT_FEEDBACK_EMAIL = 'donotreply@iuc.org.in'
-SERVER_EMAIL = 'donotreply@iuc.org.in'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = ''
+DEFAULT_FEEDBACK_EMAIL = ''
+SERVER_EMAIL = ''
 ADMINS = (
     ('Admin', 'donotreply@iuc.org.in'),
-    ('Kuldeep K. Rishi', 'kuldeep.rishi@iuc.org.in'),
     )
 MANAGERS = ADMINS
 
