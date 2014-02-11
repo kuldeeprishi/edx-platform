@@ -47,7 +47,7 @@ FEATURES = {
     'AUTH_USE_MIT_CERTIFICATES': False,
 
     # email address for studio staff (eg to request course creation)
-    'STUDIO_REQUEST_EMAIL': '',
+    'STUDIO_REQUEST_EMAIL': 'donotreply@iuc.org.in',
 
     'STUDIO_NPS_SURVEY': True,
 
@@ -62,7 +62,7 @@ FEATURES = {
 
     # If set to True, new Studio users won't be able to author courses unless
     # edX has explicitly added them to the course creator group.
-    'ENABLE_CREATOR_GROUP': False,
+    'ENABLE_CREATOR_GROUP': True,
 
     # whether to use password policy enforcement or not
     'ENFORCE_PASSWORD_POLICY': False,

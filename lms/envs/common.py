@@ -38,7 +38,7 @@ from xmodule.x_module import XModuleMixin, only_xmodules
 
 ################################### FEATURES ###################################
 # The display name of the platform to be used in templates/emails/etc.
-PLATFORM_NAME = "Rai University"
+PLATFORM_NAME = "IUC University"
 CC_MERCHANT_NAME = PLATFORM_NAME
 
 COURSEWARE_ENABLED = True
@@ -66,7 +66,7 @@ FEATURES = {
     # When True, will only publicly list courses by the subdomain. Expects you
     # to define COURSE_LISTINGS, a dictionary mapping subdomains to lists of
     # course_ids (see dev_int.py for an example)
-    'SUBDOMAIN_COURSE_LISTINGS': False,
+    'SUBDOMAIN_COURSE_LISTINGS': True,
 
     # When True, will override certain branding with university specific values
     # Expects a SUBDOMAIN_BRANDING dictionary that maps the subdomain to the
