@@ -11,6 +11,8 @@ import courseware.views
 from microsite_configuration.middleware import MicrositeConfiguration
 from edxmako.shortcuts import marketing_link
 from util.cache import cache_if_anonymous
+from django.core.cache import cache
+
 
 
 @ensure_csrf_cookie
@@ -19,7 +21,6 @@ def index(request):
     '''
     Redirects to main page -- info page if user authenticated, or marketing if not
     '''
-
     if settings.COURSEWARE_ENABLED and request.user.is_authenticated():
         return redirect(reverse('dashboard'))
 
@@ -36,9 +37,9 @@ def index(request):
         return redirect(settings.MKTG_URLS.get('ROOT'))
 
     university = MicrositeConfiguration.match_university(request.META.get('HTTP_HOST'))
-
     # keep specialized logic for Edge until we can migrate over Edge to fully use
     # microsite definitions
+
     if university == 'edge':
         context = {
             'suppress_toplevel_navigation': True

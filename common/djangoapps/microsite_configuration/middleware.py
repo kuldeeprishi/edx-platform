@@ -132,8 +132,8 @@ class MicrositeConfiguration(object):
                 microsite_configuration['university'] = university
                 microsite_configuration['subdomain'] = subdomain
                 microsite_configuration['site_domain'] = domain
+                microsite_configuration['course_org_filter'] = university
                 _microsite_configuration_threadlocal.data = microsite_configuration
-
         # also put the configuration on the request itself to make it easier to dereference
         request.microsite_configuration = _microsite_configuration_threadlocal.data
         return None
@@ -156,7 +156,7 @@ class MicrositeConfiguration(object):
         if not has_microsite_configuration_set():
             return None
 
-        configuration = settings.MICROSITE_CONFIGURATION.get(university, None)
+        configuration = settings.MICROSITE_CONFIGURATION.get(university.lower(), None)
         return configuration
 
     @classmethod

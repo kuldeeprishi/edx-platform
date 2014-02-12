@@ -71,7 +71,7 @@ FEATURES = {
     # When True, will override certain branding with university specific values
     # Expects a SUBDOMAIN_BRANDING dictionary that maps the subdomain to the
     # university to use for branding purposes
-    'SUBDOMAIN_BRANDING': False,
+    'SUBDOMAIN_BRANDING': True,
 
     'FORCE_UNIVERSITY_DOMAIN': False,  # set this to the university domain to use, as an override to HTTP_HOST
                                         # set to None to do no university selection
@@ -1158,7 +1158,6 @@ def enable_microsites(microsite_config_dict, subdomain_branding, virtual_univers
         return
 
     FEATURES['USE_MICROSITES'] = True
-
     for microsite_name in microsite_config_dict.keys():
         # Calculate the location of the microsite's files
         microsite_root = microsites_root / microsite_name

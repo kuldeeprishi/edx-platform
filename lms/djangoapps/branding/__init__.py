@@ -9,6 +9,7 @@ def get_visible_courses():
     """
     Return the set of CourseDescriptors that should be visible in this branded instance
     """
+
     _courses = modulestore().get_courses()
 
     courses = [c for c in _courses
@@ -25,7 +26,6 @@ def get_visible_courses():
         filtered_visible_ids = frozenset(settings.COURSE_LISTINGS[subdomain])
 
     filtered_by_org = MicrositeConfiguration.get_microsite_configuration_value('course_org_filter')
-
     if filtered_by_org:
         return [course for course in courses if course.location.org == filtered_by_org]
     if filtered_visible_ids:

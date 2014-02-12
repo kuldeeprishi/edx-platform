@@ -354,7 +354,53 @@ MAX_FAILED_LOGIN_ATTEMPTS_ALLOWED = ENV_TOKENS.get("MAX_FAILED_LOGIN_ATTEMPTS_AL
 MAX_FAILED_LOGIN_ATTEMPTS_LOCKOUT_PERIOD_SECS = ENV_TOKENS.get("MAX_FAILED_LOGIN_ATTEMPTS_LOCKOUT_PERIOD_SECS", 15 * 60)
 
 MICROSITE_CONFIGURATION = ENV_TOKENS.get('MICROSITE_CONFIGURATION', {})
-MICROSITE_ROOT_DIR = ENV_TOKENS.get('MICROSITE_ROOT_DIR')
+
+
+
+# Custom
+
+MICROSITE_CONFIGURATION = {
+    "aru": {
+        "domain_prefix": "aru",
+        "university": "ARU",
+        "subdomain": "aru",
+        "SITE_NAME": "aru.127.0.0.1",
+        "course_org_filter": "aru",
+    },
+    "eiilm": {
+        "domain_prefix": "eiilm",
+        "university": "EIILM",
+        "subdomain": "eiilm",
+        "SITE_NAME": "eiilm.127.0.0.1",
+        "course_org_filter": "eiilm",
+    },
+    "rtu": {
+        "domain_prefix": "rtu",
+        "university": "RTU",
+        "subdomain": "rtu",
+        "SITE_NAME": "rtu.127.0.0.1",
+        "course_org_filter": "rtu",
+    },
+    "niilm": {
+        "domain_prefix": "niilm",
+        "university": "NIILM",
+        "subdomain": "niilm",
+        "SITE_NAME": "niilm.127.0.0.1",
+        "course_org_filter": "",
+    },
+    "jru": {
+        "domain_prefix": "jru",
+        "university": "JRU",
+        "subdomain": "jru",
+        "SITE_NAME": "jru.127.0.0.1",
+        "course_org_filter": "jru",
+    },
+}
+
+# Custom end
+
+MICROSITE_ROOT_DIR = ENV_TOKENS.get('MICROSITE_ROOT_DIR', CONFIG_ROOT)
+
 if MICROSITE_CONFIGURATION:
     enable_microsites(
         MICROSITE_CONFIGURATION,
@@ -376,10 +422,12 @@ SESSION_INACTIVITY_TIMEOUT_IN_SECONDS = AUTH_TOKENS.get("SESSION_INACTIVITY_TIME
 
 # Import Subdomain Course Listing
 try:
-    import subdomain.py
+    from subdomains import *
 except ImportError:
     pass
-    
+
+
+
 # Debugging
 # print "\n*****Begin Testing *****\n"
 # print "THEME_NAME == ", THEME_NAME
@@ -392,3 +440,11 @@ except ImportError:
 # print '===== Email Sender Settings ====='
 # print "DEFAULT_FROM_EMAIL == ", DEFAULT_FROM_EMAIL
 # print "\n*****End Testing *****\n"
+
+print "\n\n***** Testing *****\n"
+print "Course Listing ==> ", COURSE_LISTINGS
+print "SUBDOMAIN_COURSE_LISTINGS ==> ", FEATURES['SUBDOMAIN_COURSE_LISTINGS']
+print "SUBDOMAIN_BRANDING ==> ", SUBDOMAIN_BRANDING
+print "VIRTUAL_UNIVERSITIES ==> ", VIRTUAL_UNIVERSITIES
+print "META_UNIVERSITIES ==> ", META_UNIVERSITIES
+print "\n***** End Testing *****\n\n"

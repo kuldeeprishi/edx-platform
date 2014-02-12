@@ -113,7 +113,6 @@ def index(request, extra_context={}, user=AnonymousUser()):
     # do explicit check, because domain=None is valid
     if domain is False:
         domain = request.META.get('HTTP_HOST')
-
     courses = get_courses(user, domain=domain)
     courses = sort_by_announcement(courses)
 
